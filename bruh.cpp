@@ -2,50 +2,45 @@
 using namespace std;
 #define int long long
 void help() {
-    int n,m;
-    cin >> n >> m;
+    int n,s;
+    cin >> n >> s;
     vector<int> vec;
-    for(int i = 0; i < m; i++)
+    map<int,int> m;
+    for(int i = 0; i < n; i++)
     {
         int num;
         cin >> num;
         vec.push_back(num);
+        m[num]++;
     }
-    sort(vec.begin(),vec.end());
-    // int longest = 1;
-    vector<int> final;
-    for(int i = 1; i < m; i++)
+    if(m[1] > s)
     {
-        int num = vec[i] - vec[i-1] - 1;
-        final.push_back(num);
-        // longest = max(longest,num);
+        cout << -1 << endl;
+        return;
     }
-    // longest = max(longest,vec[0] - 1 + n - vec[m-1]);
-    int num = vec[0] - 1 + n - vec[m-1];
-    final.push_back(num);
-    sort(final.begin(),final.end(),[](const int& a, const int& b)   
+
+    vector<int> prefix(n);
+    if(vec[0] == 1) prefix[0] = 1;
+    else prefix[0] = 0;
+
+    for(int i = 1; i < n; i++)
     {
-    return a > b;
-    });
-    // for(int i : final)
-    // {
-    //     cout << i << " ";
-    // }
-    // cout << endl;
-    int total = 0;
-    // if(final[0] > 1) final[0]--;
-    // total += final[0];
-    // for(int i = 1; i < final.size(); i++)
-    // {
-    //     if(final[i] >= 2*(i+1)) final[i] -= 2*(i+1);
-    //     if(final[i] > 0) total += (final[i] - 1);
-    // }
-    for(int i = 0; i < final.size(); i++)
-    {
-        int temp = final[i] - 2*i;
-        if(temp > 0) total += temp - 1;
+        prefix[i] = prefix[i-1] + (vec[i] == 1);
     }
-    cout << n - total << endl;
+
+    vector<int> suffix(n);
+    if(vec[n-1] == 1) suffix[n-1] = 1;
+    else suffix[n-1] = 0;
+
+    for(int i = n-2; i >= 0; i--)
+    {
+        suffix[i] = suffix[i+1] + (vec[i] == 1);
+    }
+
+    //st for prefix, en for suffix
+    //start from both sides and check via m[1]
+
+
 }
 
 signed main()
@@ -58,4 +53,11 @@ signed main()
     while(t--)
     help();
 }
+
+
+
+
+
+
+
 
