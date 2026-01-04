@@ -39,7 +39,8 @@ void help() {
 
     //st for prefix, en for suffix
     //start from both sides and check via m[1]
-
+    //hello
+    
 
 }
 
