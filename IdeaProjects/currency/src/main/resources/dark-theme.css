@@ -1,0 +1,60 @@
+.root {
+    -fx-background-color: #121212;
+    -fx-text-fill: white;
+}
+
+.label {
+    -fx-text-fill: white;
+}
+
+.button {
+    -fx-background-color: #333333;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-border-color: #555555;
+    -fx-border-radius: 8;
+}
+.button:hover {
+    -fx-background-color: #444444;
+}
+
+.text-field {
+    -fx-background-color: #222222;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #aaaaaa;
+    -fx-background-radius: 6;
+}
+
+.combo-box {
+    -fx-background-color: #222222;
+    -fx-text-fill: white;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #222222;
+    -fx-text-fill: white;
+}
+
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #333333;
+}
+.combo-box .list-cell:selected {
+    -fx-background-color: #444444;
+    -fx-text-fill: white;
+}
+
+
+.chart {
+    -fx-background-color: #1e1e1e;
+    -fx-text-fill: white;
+}
+.chart-plot-background {
+    -fx-background-color: #1a1a1a;
+}
+.axis {
+    -fx-tick-label-fill: white;
+}
+.axis-label {
+    -fx-text-fill: white;
+}
