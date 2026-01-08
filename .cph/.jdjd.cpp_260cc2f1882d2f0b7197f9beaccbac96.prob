@@ -1,1 +1,0 @@
-{"name":"Local: jdjd","url":"c:\\Users\\parni\\cppcodes\\jdjd.cpp","tests":[{"id":1761309343053,"input":"5\na\na\nabcd\nbc\nhello\ncodeforces\nhello\nhelo\ndhjakjsnasjhfksafasd\nadjsnasjhfksvdafdser\n","output":"0\n2\n13\n3\n20\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\parni\\cppcodes\\jdjd.cpp","group":"local","local":true}
